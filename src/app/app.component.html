@@ -1,0 +1,23 @@
+<body>
+  <div class="container">
+    <mat-form-field class="full-width">
+      <mat-label>Tamanho do Cilindro (Litros)</mat-label>
+      <input matInput [(ngModel)]="tamanhoCilindro">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Libras</mat-label>
+      <input matInput [(ngModel)]="libras">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Oxigênio por Minuto</mat-label>
+      <input matInput [(ngModel)]="oxigenioMin">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)=calcular()>Calcular</button>&nbsp;&nbsp;
+    <button mat-raised-button color="primary" (click)=limpar()>Limpar</button>
+    <br><br><br>
+    <div class="tempoDuracao" *ngIf=isTempoDuracao>
+      <h3>Tempo de Duração</h3>
+      <mat-card class="card">{{ tempoDuracaoCilindro }}</mat-card>
+    </div>
+  </div>
+</body>
